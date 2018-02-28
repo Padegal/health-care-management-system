@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Health care</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+.header {
+    background: url("health-calculators.jpg");
+	     background-size: cover;
+		  background-position:center;
+		  background-repeat:no-repeat;
+
+	    padding: 200px;
+    text-align: center;
+    }
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding:15px;
+}
+
+.topnav a {
+    position:relative;
+    left:20%;
+    display:inline;
+    color: #f2f2f2;
+    text-align: center;
+    padding:20px;
+    text-decoration: none;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+
+.column.side {
+    width: 47%;
+    font-size:18.5px;
+}
+
+/* Middle column */
+.column.middle {
+    width: 60%;
+    font-size:20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+form {
+
+width:300px;
+margin:auto;
+
+padding:100px;
+
+}
+.container {
+    padding: 100px;
+
+position:relative;
+float:right;
+
+width:500px;
+
+
+}
+</style>
+	 <script type="text/javascript">
+	 	function calsPerDay() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 2.54
+  var weight = find("weight").value / 2.2
+  var result = 0
+  if (find("male").checked)
+    result = 66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))
+  else if (find("female").checked)
+    result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
+  find("totalCals").innerHTML = Math.round( result )
+}
+</script>
+
+</head>
+<body>
+
+<div class="header">
+
+</div>
+
+<div class="topnav">
+   <a href="C:\Users\saigiriraj\Desktop\health\home.html">Home </a>
+   <a href="C:\Users\saigiriraj\Desktop\health\doctor_consultation.html">Doctor Consultation</a>
+   <a href="C:\Users\saigiriraj\Desktop\health\diagnosis.html">Diagnostics</a>
+    <a href="C:\Users\saigiriraj\Desktop\health\healthcal.html">Health Calculator</a>
+    <a href="C:\Users\saigiriraj\Desktop\health\medicines.html">Medicines</a>
+    <a href="C:\Users\saigiriraj\Desktop\health\login.html">Logout</a>
+</div>
+
+<div class="row">
+<div class="column side">
+
+<h3>Calorie Meter</h3>
+<b><p>What is Calorie meter ?</p></b>
+<p>Calorie meter tells you about the approximate amount of calories that your body requires to function optimally for a healthy life.</p>
+</div>
+
+  <div class="container">
+<label>Female:
+  <input id="female" type="radio" name="gender" >
+</br></label>
+<label>Male:
+ <input id="male" type="radio" name="gender"  checked>
+</label></br></br>
+<label>Age:
+  <input id="age" type="number"  placeholder = "YEARS">&nbsp;&nbsp;&nbsp;&nbsp;
+</label></br></br>
+<label>Height:
+  <input id="height" type="number" placeholder="IN INCHES"  >&nbsp;&nbsp;&nbsp;&nbsp;
+</label></br></br>
+<label>Weight:
+  <input id="weight" type="number" placeholder="IN POUNDS"  >
+
+</label>
+</br>
+<br><input type="submit" value="Calculate" onclick="calsPerDay() ;"></br>
+	<label>
+  Base metabolic rate: <span id="totalCals"></span> kcal per day
+</label>
+</div>
+
+	</body>
+</htmL>

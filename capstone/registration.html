@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+form {
+
+width:300px;
+margin:auto;
+padding:50px;
+
+}
+
+input[type=text], input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=email],input[type=password]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+button {
+    background-color:gray;
+    color: white;
+    padding: 9px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+width:220px;
+    padding:25px;
+position:relative;
+border:1px solid black;
+
+}
+h2
+{
+text-align:center;
+}
+
+
+body
+{
+font-family: arial;
+background-image:url("background_m3_login_for_m1_by_andreascy-d3ecbzg.jpg");
+background-size: 100%;
+background-position:fit;
+background-repeat:no-repeat;")
+}
+
+</style>
+<body>
+<h2>Registration Form</h2>
+
+<form action="hospital" method="POST">
+
+
+  <div class="container">
+  <label><b>FirstName :</b></label>
+      <input type="text" placeholder="Firstname" name="first" required>
+    <label><b>LastName :</b></label>
+    <input type="text" placeholder="Lastname" name="last" required>
+  <label><b>userName :</b></label>
+    <input type="email" placeholder="email" name="uid" required>
+  <label><b>Password :</b></label>
+    <input type="password" placeholder="8-Digit Password" name="pwd" required>
+
+
+
+    <button type="submit" >SIGN UP</button>
+
+
+
+
+ </div>
+</form>
+
+</body>
+</html>
